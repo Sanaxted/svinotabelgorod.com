@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с свиньей</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+        }
+        
+        .header {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .greeting {
+            color: #e91e63;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pig-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .pig-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            border: 5px solid #ffeb3b;
+        }
+        
+        .pig-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .pig-title {
+            color: #ff5722;
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .pig-description {
+            color: #666;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .emoji {
+            font-size: 2rem;
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Добро пожаловать! 🎉</h1>
+        <div class="greeting">Привет Дима!</div>
+        <p>Рады видеть тебя на нашем сайте</p>
+    </div>
+    
+    <div class="pig-container">
+        <h2 class="pig-title">Встречайте нашу милую свинку! 🐷</h2>
+        
+        <div class="emoji">🐖➡️📸</div>
+        
+        <!-- Картинка свиньи -->
+        <img src="https://jooinn.com/images/white-pig-3.jpg" 
+             alt="Белая милая свинья" 
+             class="pig-image"
+             width="600">
+        
+        <div class="pig-description">
+            <p>Это прекрасная белая свинка с любопытным взглядом! </p>
+            <p>Она такая милая и забавная, что поднимает настроение всем посетителям сайта! ✨</p>
+        </div>
+        
+        <div class="emoji">🐷❤️🌟</div>
+    </div>
+    
+    <div class="footer">
+        <p>Сайт с самой милой свиньей в интернете</p>
+        <p>© 2024 Все права защищены</p>
+    </div>
+    
+    <script>
+        // Простая анимация для интерактивности
+        document.addEventListener('DOMContentLoaded', function() {
+            const pigImage = document.querySelector('.pig-image');
+            
+            pigImage.addEventListener('click', function() {
+                alert('Хрю-хрю! 🐷 Свинка говорит привет!');
+            });
+            
+            // Меняем текст при наведении на картинку
+            pigImage.addEventListener('mouseenter', function() {
+                const title = document.querySelector('.pig-title');
+                title.textContent = "Хрю-хрю! Погладь меня! 🐽";
+            });
+            
+            pigImage.addEventListener('mouseleave', function() {
+                const title = document.querySelector('.pig-title');
+                title.textContent = "Встречайте нашу милую свинку! 🐷";
+            });
+        });
+    </script>
+</body>
+</html>
